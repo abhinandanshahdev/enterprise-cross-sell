@@ -1,0 +1,120 @@
+{
+    "enterprise_cross_sell": {
+        "products": [
+            "CASA", "Credit Cards", "Mortgages", "Personal Loans", 
+            "Fixed Deposits", "Wealth Management", "Digital Banking",
+            "Business CASA", "Business Loans", "Trade Finance",
+            "Money Transfer", "Bill Payments", "Investment Products",
+            "Insurance", "FX Services", "Payment Solutions"
+        ],
+        "penetration_matrix": {
+            "base": {
+                "personal_banking": {
+                    "min": 0.15,
+                    "max": 0.45
+                },
+                "business_banking": {
+                    "min": 0.10,
+                    "max": 0.35
+                },
+                "cross_segment": {
+                    "min": 0.05,
+                    "max": 0.20
+                }
+            },
+            "multipliers": {
+                "customer_type": {
+                    "NTB": 0.8,
+                    "ETB": 1.2
+                },
+                "employment_status": {
+                    "SALARIED": {
+                        "personal": 1.1,
+                        "business": 1.0
+                    },
+                    "SELF_EMPLOYED": {
+                        "personal": 1.0,
+                        "business": 1.1
+                    }
+                },
+                "segment": {
+                    "MASS": 1.0,
+                    "ELITE": 1.15,
+                    "SELECT": 1.25
+                }
+            }
+        },
+        "active_customers": {
+            "base_weekly": {
+                "ALL": {
+                    "mean": 100000,
+                    "std": 5000,
+                    "trend": 0.02
+                },
+                "NTB": {
+                    "mean": 30000,
+                    "std": 2000,
+                    "trend": 0.03
+                },
+                "ETB": {
+                    "mean": 70000,
+                    "std": 3000,
+                    "trend": 0.01
+                }
+            },
+            "segment_multipliers": {
+                "MASS": 0.7,
+                "ELITE": 0.2,
+                "SELECT": 0.1
+            },
+            "employment_multipliers": {
+                "SALARIED": 0.6,
+                "SELF_EMPLOYED": 0.4
+            }
+        }
+    },
+    "retention": {
+        "inactive_funnel": {
+            "base_distribution": {
+                "0_month": {"proportion": 0.35, "base": 96000},
+                "1_month": {"proportion": 0.25, "base": 96000},
+                "2_month": {"proportion": 0.15, "base": 96000},
+                "3_month": {"proportion": 0.10, "base": 96000},
+                "4_month": {"proportion": 0.08, "base": 96000},
+                "5_month": {"proportion": 0.05, "base": 96000},
+                "6_month": {"proportion": 0.02, "base": 96000}
+            },
+            "product_factors": {
+                "CASA": {"factor": 1.0, "base": 96000},
+                "Credit Cards": {"factor": 0.8, "base": 76800},
+                "Mortgages": {"factor": 0.6, "base": 57600},
+                "Personal Loans": {"factor": 0.7, "base": 67200},
+                "Fixed Deposits": {"factor": 0.5, "base": 48000},
+                "Wealth Management": {"factor": 0.4, "base": 38400},
+                "Digital Banking": {"factor": 0.9, "base": 86400},
+                "Business CASA": {"factor": 0.85, "base": 81600},
+                "Business Loans": {"factor": 0.65, "base": 62400},
+                "Trade Finance": {"factor": 0.55, "base": 52800},
+                "Money Transfer": {"factor": 0.75, "base": 72000},
+                "Bill Payments": {"factor": 0.85, "base": 81600},
+                "Investment Products": {"factor": 0.45, "base": 43200},
+                "Insurance": {"factor": 0.6, "base": 57600},
+                "FX Services": {"factor": 0.7, "base": 67200},
+                "Payment Solutions": {"factor": 0.8, "base": 76800}
+            },
+            "segment_multipliers": {
+                "MASS": {"factor": 1.2, "description": "Higher inactivity risk"},
+                "ELITE": {"factor": 0.8, "description": "Medium inactivity risk"},
+                "SELECT": {"factor": 0.6, "description": "Lower inactivity risk"}
+            },
+            "customer_type_multipliers": {
+                "NTB": {"factor": 1.3, "description": "Higher risk for new customers"},
+                "ETB": {"factor": 0.8, "description": "Lower risk for existing customers"}
+            },
+            "employment_multipliers": {
+                "SALARIED": {"factor": 0.9, "description": "Stable income"},
+                "SELF_EMPLOYED": {"factor": 1.2, "description": "Variable income"}
+            }
+        }
+    }
+} 
