@@ -1,127 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>AI Worker/Agent Deployments - Bibliography</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      font-size: 14px;
-      margin: 24px;
-      background: #fafbfc;
-    }
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      background: #fff;
-    }
-    th, td {
-      border: 1px solid #bbb;
-      padding: 6px 10px;
-      text-align: left;
-    }
-    thead {
-      background: #f2f2f2;
-    }
-    tr:nth-child(even) td {
-      background: #f9f9f9;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Workers Summary</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #1a1a1a;
+            position: sticky;
+            top: 0;
+        }
+        
+        tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .division-header {
+            background: #e8eaf6;
+            font-weight: 600;
+            color: #3949ab;
+        }
+        
+        .autonomy-high {
+            color: #2e7d32;
+            font-weight: 600;
+        }
+        
+        .autonomy-medium {
+            color: #f57c00;
+            font-weight: 600;
+        }
+        
+        .autonomy-low {
+            color: #c62828;
+            font-weight: 600;
+        }
+        
+        .summary-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .summary-item {
+            text-align: center;
+        }
+        
+        .summary-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: #3949ab;
+        }
+        
+        .summary-label {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .control-section {
+            margin-top: 40px;
+            padding: 20px;
+            background: #fff3e0;
+            border-radius: 8px;
+            border-left: 4px solid #ff9800;
+        }
+        
+        .control-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #e65100;
+        }
+        
+        .control-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .control-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ffe0b2;
+        }
+        
+        .control-list li:last-child {
+            border-bottom: none;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
 </head>
 <body>
-  <table>
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Institution</th>
-        <th>Sector</th>
-        <th>AI Worker / Agent</th>
-        <th>Key Proven Outcome</th>
-        <th>Year Live</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>1-800Accountant</td>
-        <td>Accounting (FinServ)</td>
-        <td>Salesforce Agentforce support agent</td>
-        <td>Handles ≈ 70 % of all client queries without human help</td>
-        <td>2025</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>JPMorgan Chase</td>
-        <td>Banking</td>
-        <td><strong>COIN</strong> contract-intelligence bot</td>
-        <td>Saves ~360 k lawyer-hours each year by automating ~12 k loan contracts</td>
-        <td>2017</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>OCBC Bank</td>
-        <td>Banking</td>
-        <td>“OCBC GPT” internal assistant</td>
-        <td>Employees finish research & writing tasks 50 % faster (30 k users)</td>
-        <td>2023</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>BBVA</td>
-        <td>Banking</td>
-        <td>ChatGPT Enterprise rollout</td>
-        <td>Accelerates &gt; 40 k legal queries / yr; expanding bank-wide</td>
-        <td>2025</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>Nsure.com</td>
-        <td>Insurance</td>
-        <td>AI virtual insurance representative</td>
-        <td>Auto-handles &gt; 90 % quote / policy requests; cuts manual effort 60 %</td>
-        <td>2023</td>
-      </tr>
-      <tr>
-        <td>6</td>
-        <td>U.S. IRS</td>
-        <td>Government Revenue</td>
-        <td>Voice &amp; chat bots</td>
-        <td>Served 13 M taxpayers; set $151 M in payment plans via self-service</td>
-        <td>2022–2024</td>
-      </tr>
-      <tr>
-        <td>7</td>
-        <td>California DMV</td>
-        <td>State DMV</td>
-        <td>AI doc pre-screen + virtual assistant</td>
-        <td>Reduced Real ID processing time from 35 min → 7 min</td>
-        <td>2021–2024</td>
-      </tr>
-      <tr>
-        <td>8</td>
-        <td>Estonia “Bürokratt”</td>
-        <td>National e-government</td>
-        <td>Unified public-services assistant</td>
-        <td>Projected €500 k / yr savings per agency; phased national rollout</td>
-        <td>2022–</td>
-      </tr>
-      <tr>
-        <td>9</td>
-        <td>McKinsey &amp; Co.</td>
-        <td>Consulting</td>
-        <td>Client-onboarding AI agent</td>
-        <td>Cuts onboarding lead-time ≈ 30 % via multi-dept automation</td>
-        <td>2025</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>Accenture</td>
-        <td>Consulting / BPO</td>
-        <td>“Utility &amp; strategic” AI-agent squads</td>
-        <td>Multi-agent teams drive new services and revenue growth</td>
-        <td>2025</td>
-      </tr>
-    </tbody>
-  </table>
+    <div class="container">
+        <h1>AI Workers Summary Table</h1>
+        <p class="subtitle"> Autonomous Digital Workforce Analysis</p>
+        
+        <div class="summary-section">
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <div class="summary-value">20</div>
+                    <div class="summary-label">Total AI Workers</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">78%</div>
+                    <div class="summary-label">Average Autonomy</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">24/7</div>
+                    <div class="summary-label">Operational Coverage</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-value">60-90%</div>
+                    <div class="summary-label">Efficiency Gains</div>
+                </div>
+            </div>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 20%">AI Worker Role</th>
+                    <th style="width: 30%">Key Responsibilities</th>
+                    <th style="width: 10%">Autonomy</th>
+                    <th style="width: 20%">Human Oversight Required</th>
+                    <th style="width: 20%">Expected Impact</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Government Revenues -->
+                <tr class="division-header">
+                    <td colspan="5">GOVERNMENT REVENUES TEAM</td>
+                </tr>
+                <tr>
+                    <td><strong>Revenue Forecasting Analyst</strong></td>
+                    <td>• Analyze historical revenue data<br>• Generate revenue projections<br>• Identify variance patterns</td>
+                    <td class="autonomy-high">85%</td>
+                    <td>Model parameters, major variances, policy changes</td>
+                    <td>20-40% accuracy improvement, 30% faster reporting</td>
+                </tr>
+                <tr>
+                    <td><strong>Tax Compliance Monitor</strong></td>
+                    <td>• Screen tax submissions<br>• Flag potential fraud<br>• Generate compliance reports</td>
+                    <td class="autonomy-medium">75%</td>
+                    <td>Complex cases, final fraud determination</td>
+                    <td>60% false positive reduction, 70% faster processing</td>
+                </tr>
+                <tr>
+                    <td><strong>Collection Optimization Agent</strong></td>
+                    <td>• Analyze payment patterns<br>• Prioritize collections<br>• Send automated reminders</td>
+                    <td class="autonomy-medium">70%</td>
+                    <td>Large debts, legal actions, special cases</td>
+                    <td>25% improvement in collection rates</td>
+                </tr>
+                
+                <!-- Government Investments -->
+                <tr class="division-header">
+                    <td colspan="5">OFFICE OF GOVERNMENT INVESTMENTS</td>
+                </tr>
+                <tr>
+                    <td><strong>Portfolio Analytics Manager</strong></td>
+                    <td>• Real-time performance monitoring<br>• Risk assessment<br>• Rebalancing recommendations</td>
+                    <td class="autonomy-high">80%</td>
+                    <td>Investments >AED 10M, strategy changes</td>
+                    <td>95% faster analysis, real-time insights</td>
+                </tr>
+                <tr>
+                    <td><strong>Investment Research Analyst</strong></td>
+                    <td>• Market trend analysis<br>• Due diligence gathering<br>• Investment memo drafting</td>
+                    <td class="autonomy-medium">75%</td>
+                    <td>Final recommendations, strategic alignment</td>
+                    <td>50% reduction in research time</td>
+                </tr>
+                <tr>
+                    <td><strong>Risk Assessment Specialist</strong></td>
+                    <td>• Continuous risk monitoring<br>• Stress testing<br>• Early warning alerts</td>
+                    <td class="autonomy-high">85%</td>
+                    <td>Risk thresholds, major events, policy violations</td>
+                    <td>24/7 coverage, 40% faster response</td>
+                </tr>
+                
+                <!-- Debt Management -->
+                <tr class="division-header">
+                    <td colspan="5">DEBT MANAGEMENT TEAM</td>
+                </tr>
+                <tr>
+                    <td><strong>Debt Portfolio Optimizer</strong></td>
+                    <td>• Interest rate monitoring<br>• Refinancing alerts<br>• Cost optimization</td>
+                    <td class="autonomy-medium">75%</td>
+                    <td>Refinancing decisions, new debt issuance</td>
+                    <td>20-50% better forecasting, millions in savings</td>
+                </tr>
+                <tr>
+                    <td><strong>Covenant Compliance Monitor</strong></td>
+                    <td>• Track debt covenants<br>• Alert on breaches<br>• Generate certificates</td>
+                    <td class="autonomy-high">80%</td>
+                    <td>Breach remediation, waiver negotiations</td>
+                    <td>100% coverage, zero missed deadlines</td>
+                </tr>
+                <tr>
+                    <td><strong>Credit Rating Analyst</strong></td>
+                    <td>• Monitor rating indicators<br>• Predict rating changes<br>• Prepare agency reports</td>
+                    <td class="autonomy-medium">70%</td>
+                    <td>Agency communications, strategic responses</td>
+                    <td>Proactive rating management</td>
+                </tr>
+                
+                <!-- Commercial Buildings -->
+                <tr class="division-header">
+                    <td colspan="5">COMMERCIAL BUILDINGS TEAM</td>
+                </tr>
+                <tr>
+                    <td><strong>Loan Processing Specialist</strong></td>
+                    <td>• Application screening<br>• Document verification<br>• Credit assessment</td>
+                    <td class="autonomy-high">85%</td>
+                    <td>Final approval, exceptions, large loans</td>
+                    <td>90% faster (35min to 7min)</td>
+                </tr>
+                <tr>
+                    <td><strong>Property Valuation Analyst</strong></td>
+                    <td>• Market data analysis<br>• Automated valuations<br>• Risk assessment</td>
+                    <td class="autonomy-medium">70%</td>
+                    <td>Complex valuations, disputes</td>
+                    <td>Consistent valuations, 80% time savings</td>
+                </tr>
+                <tr>
+                    <td><strong>Customer Service Agent</strong></td>
+                    <td>• Answer inquiries<br>• Process requests<br>• Schedule appointments</td>
+                    <td class="autonomy-high">80%</td>
+                    <td>Complex queries, complaints</td>
+                    <td>24/7 availability, 70% query resolution</td>
+                </tr>
+                
+                <!-- Financial Systems Technology -->
+                <tr class="division-header">
+                    <td colspan="5">FINANCIAL SYSTEMS TECHNOLOGY TEAM</td>
+                </tr>
+                <tr>
+                    <td><strong>Cybersecurity Guardian</strong></td>
+                    <td>• Threat detection<br>• Vulnerability scanning<br>• Incident response</td>
+                    <td class="autonomy-high">90%</td>
+                    <td>Major breaches, system changes</td>
+                    <td>95% threat detection, real-time protection</td>
+                </tr>
+                <tr>
+                    <td><strong>System Performance Optimizer</strong></td>
+                    <td>• Monitor system health<br>• Predict failures<br>• Optimize resources</td>
+                    <td class="autonomy-high">85%</td>
+                    <td>Major upgrades, critical decisions</td>
+                    <td>40% less downtime, 30% cost reduction</td>
+                </tr>
+                <tr>
+                    <td><strong>Integration Orchestrator</strong></td>
+                    <td>• API management<br>• Data flow monitoring<br>• Error resolution</td>
+                    <td class="autonomy-medium">75%</td>
+                    <td>New integrations, architecture changes</td>
+                    <td>Seamless operations, 60% faster integration</td>
+                </tr>
+                
+                <!-- Cross-Functional -->
+                <tr class="division-header">
+                    <td colspan="5">CROSS-FUNCTIONAL AI WORKERS</td>
+                </tr>
+                <tr>
+                    <td><strong>Financial Report Generator</strong></td>
+                    <td>• Automated reporting<br>• Data consolidation<br>• Regulatory filing prep</td>
+                    <td class="autonomy-high">80%</td>
+                    <td>Final review, material changes</td>
+                    <td>72% time savings, 99% accuracy</td>
+                </tr>
+                <tr>
+                    <td><strong>Audit Assistant</strong></td>
+                    <td>• Transaction testing<br>• Control monitoring<br>• Issue identification</td>
+                    <td class="autonomy-medium">75%</td>
+                    <td>Judgment calls, material findings</td>
+                    <td>100% transaction coverage, 50% faster</td>
+                </tr>
+                <tr>
+                    <td><strong>Procurement Analyst</strong></td>
+                    <td>• Supplier evaluation<br>• Contract analysis<br>• Spend optimization</td>
+                    <td class="autonomy-medium">70%</td>
+                    <td>Vendor selection, negotiations</td>
+                    <td>80% faster processing, 15% cost savings</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="control-section">
+            <h2 class="control-title">Human Control Mechanisms</h2>
+            <ul class="control-list">
+                <li><strong>Override Authority:</strong> Humans can override any AI decision with emergency stop capabilities</li>
+                <li><strong>Approval Thresholds:</strong> Monetary limits (e.g., >AED 1M) and risk-based escalation requirements</li>
+                <li><strong>Monitoring & Audit:</strong> Real-time decision tracking, performance reviews, and compliance audits</li>
+                <li><strong>Continuous Learning:</strong> Human feedback loops and supervised model retraining</li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
